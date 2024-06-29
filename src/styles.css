@@ -1,0 +1,150 @@
+html{
+    font-family: system-ui;
+}
+
+.forward > img,
+.backward > img{
+    background: black;
+    pointer-events: none;
+    user-select: none
+;
+
+}
+.forward,.backward{
+    cursor: pointer;
+    user-select: none
+
+}
+
+body{
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-enabled.dropdown-items{
+    display: flex;
+}
+
+.dropdown-item.expand:hover>.dropdown-items.expand{
+    display: grid;
+}
+
+
+
+.dropdown-items{
+    flex-direction: column;
+    width: 15rem;
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+}
+
+.dropdown-items.expand{
+    display: none;
+    grid-column: 2 / 3;
+    grid-row-start: 1;
+    align-self: flex-start;
+}
+
+.dropdown-item.expand:after{
+    content: ">";
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    transform: translate(-1rem, 0px);
+}
+
+
+
+.dropdown-item.expand{
+    display: grid;
+    justify-content: normal;
+    >:first-child{
+        text-align: center;
+    }
+}
+
+.dropdown-item{
+    cursor: default;
+    user-select: none;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dropdown-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-self: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    li{
+        cursor: pointer;
+        caret-color: transparent;
+        user-select: none;
+    }
+}
+
+.main-image-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.image-background{
+    flex: 1;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+.image-carousel-container{
+    box-shadow: inset 0 0 20px 20px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    overflow: hidden;
+    min-width: 0;
+    height: 100%;
+    flex: 1;
+}
+
+.image-container{
+    border: solid black 1px;
+    height: 90%;
+    width: 30%;
+    flex: none
+;
+}
+
+.dropdown-item:hover{
+    background: #363635;
+    border-radius: 0.5rem;
+
+}
+
+.dropdown-items{
+    display: none;
+    background: black;
+    border-radius: 0.5rem;
+
+}
+.expand{
+}
